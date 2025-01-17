@@ -22,6 +22,8 @@
             | Database    |        | Database    |
             +-------------+        +-------------+
 
+https://github.com/Neia2/holbertonschool-system_engineering-devops/blob/main/web_infrastructure_design/T1.png
+
 Load Balancer:
 Distributes incoming requests to multiple servers.
 Algorithm (e.g., Round-Robin, Least Connections) ensures balanced workloads.

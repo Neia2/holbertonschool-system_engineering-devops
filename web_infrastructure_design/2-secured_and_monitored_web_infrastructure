@@ -31,6 +31,8 @@
           Monitoring Tools:
           - Logs, QPS metrics, and alerts collected by tools like Prometheus.
 
+https://github.com/Neia2/holbertonschool-system_engineering-devops/blob/main/web_infrastructure_design/T2.png
+
 Firewalls: Protect servers from unauthorized access and attacks.
 HTTPS: Encrypts traffic to prevent eavesdropping and ensure data integrity.
 Monitoring:

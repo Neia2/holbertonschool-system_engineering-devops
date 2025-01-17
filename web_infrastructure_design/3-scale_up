@@ -26,6 +26,8 @@
       | Web Server     |   | App Server     |   | Database Server |
       +----------------+   +----------------+   +----------------+
 
+https://github.com/Neia2/holbertonschool-system_engineering-devops/blob/main/web_infrastructure_design/T3.png
+
 Splitting components improves:
 Performance: Specialized resources handle specific tasks efficiently.
 Scalability: Independent scaling of components (e.g., adding more application servers).
