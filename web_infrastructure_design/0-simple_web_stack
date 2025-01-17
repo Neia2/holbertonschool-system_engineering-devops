@@ -26,6 +26,8 @@
                               |      +----------------+
                               v
 
+https://github.com/Neia2/holbertonschool-system_engineering-devops/blob/main/web_infrastructure_design/T0.png
+
 Server: A computer or program providing functionality to other devices (clients).
 Role of Domain Name: Translates the human-readable name www.foobar.com into the server's IP.
 Type of DNS Record: www is an A record, mapping the domain to the IP 8.8.8.8.
