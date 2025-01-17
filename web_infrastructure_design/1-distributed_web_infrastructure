@@ -1,0 +1,37 @@
+                     +---------------------+
+                     |  User's Browser     |
+                     +---------------------+
+                              |
+                              v
+                  +------------------------+
+                  |    Domain Name         |
+                  |   www.foobar.com       |
+                  +------------------------+
+                              |
+                              v
+                     +----------------+
+                     | Load Balancer  |
+                     |   (HAProxy)    |
+                     +----------------+
+                           /    \
+                          /      \
+            +-------------+        +-------------+
+            |   Server 1  |        |   Server 2  |
+            | Web Server  |        | Web Server  |
+            | App Server  |        | App Server  |
+            | Database    |        | Database    |
+            +-------------+        +-------------+
+
+Load Balancer:
+Distributes incoming requests to multiple servers.
+Algorithm (e.g., Round-Robin, Least Connections) ensures balanced workloads.
+Active-Active: All servers handle traffic simultaneously.
+Active-Passive: One server is on standby, taking over during failure.
+Database Cluster:
+Master Node: Handles all writes.
+Replica Node(s): Handle reads and replicate data from the Master.
+Issues:
+
+SPOF: Load balancer is a single point of failure without redundancy.
+Security: No firewalls or HTTPS.
+No Monitoring: System health is not tracked.

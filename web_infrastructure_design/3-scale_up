@@ -1,0 +1,32 @@
+                     +---------------------+
+                     |  User's Browser     |
+                     +---------------------+
+                              |
+                              v
+                  +------------------------+
+                  |    Domain Name         |
+                  |   www.foobar.com       |
+                  +------------------------+
+                              |
+                              v
+                     +----------------+
+                     | Load Balancer  |
+                     |  Cluster (2x)  |
+                     +----------------+
+                              |
+                    +-------------------+
+                    |       HTTPS       |
+                    +-------------------+
+                              |
+                    +-------------------+
+                    |    Firewalls      |
+                    +-------------------+
+                      /       |       \
+      +----------------+   +----------------+   +----------------+
+      | Web Server     |   | App Server     |   | Database Server |
+      +----------------+   +----------------+   +----------------+
+
+Splitting components improves:
+Performance: Specialized resources handle specific tasks efficiently.
+Scalability: Independent scaling of components (e.g., adding more application servers).
+Clustered load balancers eliminate the load balancer SPOF.

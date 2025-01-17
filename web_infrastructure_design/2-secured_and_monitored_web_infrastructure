@@ -1,0 +1,42 @@
+                     +---------------------+
+                     |  User's Browser     |
+                     +---------------------+
+                              |
+                              v
+                  +------------------------+
+                  |    Domain Name         |
+                  |   www.foobar.com       |
+                  +------------------------+
+                              |
+                              v
+                     +----------------+
+                     | Load Balancer  |
+                     |   (HAProxy)    |
+                     +----------------+
+                              |
+               +--------------------------+
+               |          HTTPS           |
+               +--------------------------+
+                              |
+               +--------------------------+
+               |          Firewall        |
+               +--------------------------+
+                     /            \
+          +----------------+    +----------------+
+          |   Server 1     |    |   Server 2     |
+          | Web/App Server |    | Web/App Server |
+          |    Database    |    |    Database    |
+          +----------------+    +----------------+
+
+          Monitoring Tools:
+          - Logs, QPS metrics, and alerts collected by tools like Prometheus.
+
+Firewalls: Protect servers from unauthorized access and attacks.
+HTTPS: Encrypts traffic to prevent eavesdropping and ensure data integrity.
+Monitoring:
+Tracks performance metrics (e.g., CPU usage, traffic volume).
+QPS monitoring: Use tools like Prometheus or AWS CloudWatch.
+Issues:
+SSL Termination: Ending SSL at the load balancer leaves internal traffic unencrypted.
+Single MySQL Master: Failure of the Master node disrupts writes.
+Uniform Components: Running all services on all servers makes scaling and management harder.

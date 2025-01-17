@@ -1,0 +1,40 @@
+                     +---------------------+
+                     |  User's Browser     |
+                     +---------------------+
+                              |
+                              v
+                  +------------------------+
+                  |    Domain Name         |
+                  |   www.foobar.com       |
+                  +------------------------+
+                              |
+                              v
+                +--------------------------+
+                |         Server           |
+                |  (IP: 8.8.8.8)           |
+                +--------------------------+
+                              |
+        +----------------+    |     +----------------+
+        | Web Server     |    |     | Application    |
+        | (Nginx)        |    |     | Server         |
+        +----------------+    |     +----------------+
+                              |               |
+                              |               v
+                              |      +----------------+
+                              |      |  Database       |
+                              |      |  (MySQL)        |
+                              |      +----------------+
+                              v
+
+Server: A computer or program providing functionality to other devices (clients).
+Role of Domain Name: Translates the human-readable name www.foobar.com into the server's IP.
+Type of DNS Record: www is an A record, mapping the domain to the IP 8.8.8.8.
+Role of Web Server: Handles HTTP requests and serves static files.
+Role of Application Server: Processes user inputs, executes business logic, and interacts with the database.
+Role of Database: Stores and manages data persistently.
+Communication: Server communicates with the user's computer via the HTTP/HTTPS protocol.
+
+Issues:
+SPOF: If the server fails, the entire system goes down.
+Downtime: Maintenance or deployments cause unavailability.
+Scalability: Unable to handle high traffic.
